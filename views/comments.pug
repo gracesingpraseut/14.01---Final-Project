@@ -1,11 +1,15 @@
 extends layout 
 
 block content 
+
+    if error 
+        p Something went wrong. Please try again.
+
     h1 Comments 
 
     form(method="POST" action='/create')
         label(for="task") Comment:
-        input(type="text" name="task" id="tast" required maxlength="255")
+        input(type="text" name="task" id="task" required maxlength="255")
         button(type="submit") Submit
 
     hr

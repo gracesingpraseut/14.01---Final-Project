@@ -78,11 +78,11 @@ router.get('/about', function(req, res){
 router.get('/comments', function(req, res){
   const limit = 10;
   const offset = parseInt(req.query.offset) || 0;
-  
-  req.db.query('SELECT * FROM todos;', (err, results) => {
+
+  req.db.query('SELECT * FROM todos LIMIT ? OFFSET ?;', [limit, offset], (err, results) => {
 
     if(err){
-      return res.status(500).send("Error loading comments");
+      return res.render('comments', { comments: [], error: true });
     }
 
     // comment timestamp format
