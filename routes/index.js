@@ -71,7 +71,18 @@ router.get('/about', function(req, res){
 // comments
 router.get('/comments', function(req, res){
   req.db.query('SELECT * FROM todos;', (err, results) => {
-    res.render('comments', { comments: results});
+
+    if(err){
+      return res.status(500).send("Error loading comments");
+    }
+
+    // comment timestamp format
+    const formatted = results.map(c => ({
+      ...c, formattedDate: new Date(c.created_at).toLocaleString()
+    }));
+
+    res.render('comments', { comments: formatted })
+
   });
 });
 
