@@ -7,7 +7,7 @@ block content
 
     h1 Comments 
 
-    form(method="POST" action='/create')
+    form(method="POST" action="/create" onsubmit="if (this.submitted) return false; this.submitted = true; this.querySelector('button').disabled = true;")
         label(for="task") Comment:
         input(type="text" name="task" id="task" required maxlength="255")
         button(type="submit") Submit
