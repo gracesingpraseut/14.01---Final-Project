@@ -2,21 +2,23 @@ extends layout
 
 block content 
 
-    if error 
-        p Something went wrong. Please try again.
+    main
 
-    h1 Comments 
+        if error 
+            p Something went wrong. Please try again.
 
-    form(method="POST" action="/create" onsubmit="if (this.submitted) return false; this.submitted = true; this.querySelector('button').disabled = true;")
-        label(for="task") Comment:
-        input(type="text" name="task" id="task" required maxlength="255")
-        button(type="submit") Submit
+        h1 Comments 
 
-    hr
+        form(method="POST" action="/create" onsubmit="if (this.submitted) return false; this.submitted = true; this.querySelector('button').disabled = true;")
+            label(for="task") Comment:
+            input(type="text" name="task" id="task" required maxlength="255")
+            button(type="submit") Submit
 
-    each val in comments 
-        .comment
-            p= val.task 
-            small= val.formattedDate 
+        hr
 
-    a.button(href="/comments?offset=" + nextOffset) Load More
+        each val in comments 
+            .comment
+                p= val.task 
+                small= val.formattedDate 
+
+        a.button(href="/comments?offset=" + nextOffset) Load More
