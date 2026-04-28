@@ -3,7 +3,7 @@ extends layout
 block content 
     h1 Comments 
 
-    form(methods="POST" action='/create')
+    form(method="POST" action='/create')
         input(type="text" name="task" required)
         button(type="submit") Submit
 

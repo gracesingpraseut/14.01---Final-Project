@@ -19,19 +19,24 @@ router.get('/', function(req, res, next){
 
 router.post('/create', function (req, res, next) {
     const { task } = req.body;
+
+    if (!task || task.trim() === '') {
+      return res.status(400).send("Comment cannot be empty");
+    }
+
     try {
       req.db.query('INSERT INTO todos (task) VALUES (?);', [task], (err, results) => {
         if (err) {
-          console.error('Error adding todo:', err);
-          return res.status(500).send('Error adding todo');
+          console.error('Error adding comment:', err);
+          return res.status(500).send('Error adding comment');
         }
-        console.log('Todo added successfully:', results);
+        console.log('Comment added successfully:', results);
         // Redirect to the home page after adding
-        res.redirect('/');
+        res.redirect('/comments');
       });
     } catch (error) {
-      console.error('Error adding todo:', error);
-      res.status(500).send('Error adding todo');
+      console.error('Error adding comment:', error);
+      res.status(500).send('Error adding comment');
     }
 });
 
