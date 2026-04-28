@@ -4,7 +4,7 @@ block content
     h1 Comments 
 
     form(method="POST" action='/create')
-        input(type="text" name="task" required)
+        input(type="text" name="task" id="tast" required maxlength="255")
         button(type="submit") Submit
 
     hr
@@ -14,4 +14,4 @@ block content
             p= val.task 
             small= val.formattedDate 
 
-    a.button(href='/comments?offset=${nextOffset}') Load More
+    a.button(href="/comments?offset=" + nextOffset) Load More
