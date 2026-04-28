@@ -51,3 +51,38 @@ small {
 section.card {
   margin: 20px auto;
 }
+
+.logo {
+  display: block;
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+.header {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.header h1 {
+  font-size: 90px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header-buttons {
+  margin-top: 30px;
+}
+
+.secondary {
+  background-color: #F7F7F7;
+  color: #10291D;
+}
+
+.card h2 {
+  color: #10291D;
+}

@@ -1,7 +1,19 @@
 extends layout
 
 block content
-  main 
-    section.hero
-      h1 Downtown Donuts 
-      p Fresh donuts and coffee since 1992
+  main
+    section.header
+        h1 Downtown Donuts
+        p Fresh donuts, warm coffee, and cozy mornings since 1992.
+        div.header-buttons
+          a.button(href="/menu") View Menu
+          a.button.secondary(href="/comments") Leave a Comment
+
+    section.card
+      h2 Made Fresh Daily
+
+    section.card
+      h2 Order Online
+      p Order pick up or delivery:
+      a.button(href="https://www.doordash.com") DoorDash
+      a.button(href="https://www.ubereats.com") UberEats
