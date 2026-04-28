@@ -1,22 +1,24 @@
 extends layout 
 
 block content
+    main 
 
-    h1 Menu
+        h1 Menu
 
-    h2 Donuts 
-    u1 
-        li Original Glazed Donut - $3.00
-        li Maple Bar - $4.00
-        li Strawberry Glazed Donut - $3.50
-    
-    h2 Coffee 
-    u1 
-        li Black Coffee - $3.00
-        li Latte - $3.50
-        li Mocha - $4.50
-    
-    h2 Order Online 
-    a.button(href="https://www.doordash.com") Order on DoorDash
-    br
-    a.button(href="https://www.ubereats.com") Order on UberEats
+        section.card
+            h2 Donuts 
+            p Original Glazed Donut - $3.00
+            p Maple Bar - $4.00
+            p Strawberry Glazed Donut - $3.50
+        
+        section.card
+            h2 Coffee 
+            p Black Coffee - $3.00
+            p Latte - $3.50
+            p Mocha - $4.50
+        
+        section.card
+            h2 Order Online 
+            a.button(href="https://www.doordash.com") Order on DoorDash
+            br
+            a.button(href="https://www.ubereats.com") Order on UberEats
