@@ -56,7 +56,7 @@ router.post('/delete', function (req, res, next) {
         console.error('Error deleting todo:', error);
         res.status(500).send('Error deleting todo:');
     }
-});
+}); 
 
 // menu
 router.get('/menu', function(req, res){
