@@ -87,8 +87,10 @@ router.get('/comments', function(req, res){
       ...c, formattedDate: new Date(c.created_at).toLocaleString()
     }));
 
-    res.render('comments', { comments: formatted })
-
+    res.render('comments', { 
+      comments: formatted,
+      nextOffset: offset + limit 
+    });
   });
 });
 
