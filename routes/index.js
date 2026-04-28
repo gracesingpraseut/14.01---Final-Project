@@ -20,8 +20,14 @@ router.get('/', function(req, res, next){
 router.post('/create', function (req, res, next) {
     const { task } = req.body;
 
+    // check for empty comment
     if (!task || task.trim() === '') {
       return res.status(400).send("Comment cannot be empty");
+    }
+
+    // check for long comment
+    if (task.length > 255){
+      return res.status(400).send("Comment is too long");
     }
 
     try {
