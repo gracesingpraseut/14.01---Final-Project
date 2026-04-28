@@ -53,12 +53,19 @@ router.post('/delete', function (req, res, next) {
     }
 });
 
+// menu
 router.get('/menu', function(req, res){
   res.render('menu');
 });
 
+// about
 router.get('/about', function(req, res){
   res.render('about');
+});
+
+// comments
+router.get('/comments', function(req, res){
+  res.render('comments');
 });
 
 module.exports = router;
