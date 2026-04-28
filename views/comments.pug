@@ -4,6 +4,7 @@ block content
     h1 Comments 
 
     form(method="POST" action='/create')
+        label(for="task") Comment:
         input(type="text" name="task" id="tast" required maxlength="255")
         button(type="submit") Submit
 
