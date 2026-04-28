@@ -1,12 +1,12 @@
 # CS208 Full Stack Final Project - Donut Shop Application
 
 - Name: Grace Singpraseuth
-- GitHub: 
+- GitHub: [https://github.com/gracesingpraseut](https://github.com/gracesingpraseut)
 - Term: Spring 2026
 
 ## Project Description
 
-
+This is my full stack web application built using Node.js. The application is a prototype website for Downtown Donuts, a donut and coffee shop. Users can view the menu, learn about the shop, and post comments through the full stack comment system. The site is designed to be cozy and modern to draw the users' attention. 
 
 ## Install the Database
 
