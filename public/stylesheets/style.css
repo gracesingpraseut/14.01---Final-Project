@@ -20,3 +20,18 @@ nav a {
 h1 {
   font-family: 'Italianno', cursive;
 }
+
+.comment {
+  background-color: #F7F7F7;
+  color: #10291D;
+  padding: 15px;
+  margin: 15px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+small {
+  display: block;
+  font-size: 12px;
+  color: #555;
+}

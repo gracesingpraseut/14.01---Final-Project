@@ -10,5 +10,6 @@ block content
     hr
 
     each val in comments 
-        p= val.task 
-        small= val.formattedDate 
+        .comment
+            p= val.task 
+            small= val.formattedDate 
