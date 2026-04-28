@@ -8,8 +8,8 @@ body {
 nav {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
+  gap: 30px;
+  padding: 15px;
 }
 
 nav a {
@@ -49,6 +49,11 @@ small {
 }
 
 section.card {
+  background-color: #F7F7F7;
+  color: #10291D;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
   margin: 20px auto;
 }
 
@@ -85,4 +90,9 @@ section.card {
 
 .card h2 {
   color: #10291D;
+}
+
+section {
+  text-align: center;
+  margin-top: 40px;
 }
