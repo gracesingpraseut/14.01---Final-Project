@@ -65,7 +65,9 @@ router.get('/about', function(req, res){
 
 // comments
 router.get('/comments', function(req, res){
-  res.render('comments');
+  req.db.query('SELECT * FROM todos;', (err, results) => {
+    res.render('comments', { comments: results});
+  });
 });
 
 module.exports = router;

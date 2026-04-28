@@ -6,3 +6,8 @@ block content
     form(methods="POST" action='/create')
         input(type="text" name="task" required)
         button(type="submit") Submit
+
+    hr
+
+    each val in comments 
+        p= val.task
