@@ -47,6 +47,17 @@ npm start
 On Codespaces, you can access the application by forwarding port 3000. Open the
 forwarded port in your browser to view the application.
 
+## Design Decisions
+
+1. For the layout of the website, I made everything centered and evenly spaced to give it the minimal, modern feel that the client specified. I also decided not to use many harsh lines and used mainly curved edges. This helped create the cozy feel that the client asked for. 
+
+2. I decided to use a large heading with a top navigation bar on the homepage to help users easily navigate through the website. 
+
+3. I used the client's color palette throughout the entire website for consistency and to help with the cozy feeling the client wants. 
+
 ## Sources
 
 https://developers.google.com/fonts/docs/getting_started?utm_source=chatgpt.com
+https://www.w3schools.com/css/css_website_layout.asp
+https://www.w3schools.com/howto/howto_css_center_website.asp
+
